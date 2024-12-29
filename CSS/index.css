@@ -1,15 +1,15 @@
-/*  */
+/* Change the default color of the page body  */
 body {
     background-color: bisque;
     padding: 20px;
 }
 
-/*  */
+/* Change the default font color */
 * {
     color:sienna;
 }
 
-/* Add spacing (padding/margin) between sections */
+/* For header 1: Customized the font size, weight, font type, padding, alignment, and border color band */
 h1 {
     font-size: 50px;
     font-weight:lighter;
@@ -21,18 +21,19 @@ h1 {
     max-width: 1500px;
 }
 
-/*  */
+/* For header 2: Customized the font size, weight, font color, text alignment, border band color, beveled 
+edges of band color, and modified width of band */
 h2 {
     font-size: 25px;
     font-weight:bolder;
     color:darkred;
-    background-color:color-mix(in hsl shorter hue, pink 30%, cadetblue 50%);
     text-align: left;
+    background-color:color-mix(in hsl shorter hue, pink 30%, cadetblue 50%);
     border-radius: 7%;
     width: 140px;
 }
 
-/* Add spacing (margin) between sections */
+/* Add spacing (padding/margin) between sections */
 section {
     margin-top: 7px;
     margin-bottom: 10px;
