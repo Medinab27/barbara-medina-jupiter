@@ -1,0 +1,57 @@
+/*  */
+body {
+    background-color: bisque;
+    padding: 20px;
+}
+
+/*  */
+* {
+    color:sienna;
+}
+
+/* Add spacing (padding/margin) between sections */
+h1 {
+    font-size: 50px;
+    font-weight:lighter;
+    font-family: "Agu Display", serif;
+    padding-top: 0.5;
+    background-color:cadetblue;
+    text-align: center;
+    border-radius: 15%;
+    max-width: 1500px;
+}
+
+/*  */
+h2 {
+    font-size: 25px;
+    font-weight:bolder;
+    color:darkred;
+    background-color:color-mix(in hsl shorter hue, pink 30%, cadetblue 50%);
+    text-align: left;
+    border-radius: 7%;
+    width: 140px;
+}
+
+/* Add spacing (margin) between sections */
+section {
+    margin-top: 7px;
+    margin-bottom: 10px;
+    padding-bottom: 0.2;
+}
+
+/* Transform the "Experience" list items into styled blocks  */
+#Experience {
+    ul {
+        list-style: square;
+}}
+
+/*Transform the style of the "Connect" links, STRETCH-GOAL: add images as links */
+#Connect {
+    ul{
+        list-style: none;
+}}
+
+/*Make footer font size smaller than all the other text on the page */
+footer {
+    font-size:x-small;
+}
