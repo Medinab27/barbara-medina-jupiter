@@ -37,22 +37,66 @@ h2 {
 section {
     margin-top: 7px;
     margin-bottom: 10px;
-    padding-bottom: 0.2;
+    padding-bottom: 0.2px;
 }
 
 /* Transform the "Experience" list items into styled blocks  */
-#Experience {
-    ul {
+#Experience ul{
         list-style: square;
-}}
+        display: flex;
+}
 
-/*Transform the style of the "Connect" links, STRETCH-GOAL: add images as links */
-#Connect {
-    ul{
+/*Transform the style of the "Connect" links, and use flexbox. STRETCH-GOAL: add images as links */
+#Connect ul {
         list-style: none;
-}}
+        display: flex;
+}
+
+/*use flexbox to make the connect icons next to each other and some distance apart */
+.connection-icon {
+    border: 2px ;
+    margin: 10px;
+}
 
 /*Make footer font size smaller than all the other text on the page */
 footer {
     font-size:x-small;
+}
+
+/*Make menu bar at the top of the page that stays there after scrolling down */
+.menu {
+    background-color:rgb(76, 70, 70);
+    padding: 5px 0;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+/*Make a list of the menu options at the top of the page and create direct links to the site */
+.menu ul {
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+
+    li {
+        display: inline;
+        margin: 0 15px;
+        font-size: 30px;
+    }
+
+    li a{
+        color: beige;
+    }
+}
+
+/*In the experience section, create columns for work experience with descriptions */
+.Experience-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*In the experience section, make the columns for work experience with descriptions evenly spaced to avoid overlap */
+.Experiences {
+    border: 2px ;
+    margin: 5px;
 }
