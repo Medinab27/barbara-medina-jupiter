@@ -1,102 +1,173 @@
 /* Change the default color of the page body  */
 body {
-    background-color: bisque;
-    padding: 20px;
+  background-color: rgba(246, 242, 242, 0.793);
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Make menu bar at the top of the page that stays there after scrolling down */
+.menu {
+  background-color: rgb(31, 28, 28);
+  padding: 5px 0;
+  position: sticky;
+  width: 45%;
+  top: 0;
+  font-size:small;
+}
+
+/*Make a list of the menu options at the top of the page and create direct links to the site */
+.menu ul {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+
+  li {
+    display: inline;
+    margin: 0 15px;
+    font-size: 17px;
+  }
+
+  li a {
+    color: beige;
+  }
+}
+
+/* Image container to manipulate size and position on page with a nested css for how the image behaves */
+.image-container {
+  width: auto; 
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  left: 0; /* Align to the left side */
+  top: 15; /* Align to the top */
+
+  img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; /* Maintain aspect ratio while filling the container */
+    opacity: 0.5; /* Set image opacity to 50% */
+  }
+}
+
+/* Text container to move all the text of the website to the right hand side of the image */
+.text-container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  justify-content: space-around; /* Wrapping the text around to prevent horizontal scrolling */
+  word-wrap: break-word;
+  box-sizing: border-box;
+  overflow: auto;
+  max-width: 100%;
 }
 
 /* Change the default font color */
 * {
-    color:sienna;
+  color: rgb(59, 53, 50);
 }
 
 /* For header 1: Customized the font size, weight, font type, padding, alignment, and border color band */
 h1 {
-    font-size: 50px;
-    font-weight:lighter;
-    font-family: "Agu Display", serif;
-    padding-top: 0.5;
-    background-color:cadetblue;
-    text-align: center;
-    border-radius: 15%;
-    max-width: 1500px;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: "Agu Display", serif;
+  padding-top: 0.5;
+  text-align: center;
+  border-radius: 15%;
+  max-width: 1500px;
+  word-wrap: break-word;
+  margin: 0;
 }
 
 /* For header 2: Customized the font size, weight, font color, text alignment, border band color, beveled 
 edges of band color, and modified width of band */
 h2 {
-    font-size: 25px;
-    font-weight:bolder;
-    color:darkred;
-    text-align: left;
-    background-color:color-mix(in hsl shorter hue, pink 30%, cadetblue 50%);
-    border-radius: 7%;
-    width: 140px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(252, 249, 249);
+  text-align: center;
+  background-color: color-mix(in hsl shorter hue, rgb(50, 45, 46) 30%, rgb(51, 59, 59) 50%);
+  border-radius: 7%;
+  width: 140px;
+  word-wrap: break-word;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 /* Add spacing (padding/margin) between sections */
 section {
-    margin-top: 7px;
-    margin-bottom: 10px;
-    padding-bottom: 0.2px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+  padding-bottom: 0.2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Transform the "Experience" list items into styled blocks  */
-#Experience ul{
-        list-style: square;
-        display: flex;
+#Experience ul {
+  list-style: square;
+  display: grid;
+  flex-wrap: wrap;
 }
 
 /*Transform the style of the "Connect" links, and use flexbox. STRETCH-GOAL: add images as links */
 #Connect ul {
-        list-style: none;
-        display: flex;
+  list-style: none;
+  display: flex;
 }
 
 /*use flexbox to make the connect icons next to each other and some distance apart */
 .connection-icon {
-    border: 2px ;
-    margin: 10px;
+  border: 2px;
+  margin: 10px;
 }
 
 /*Make footer font size smaller than all the other text on the page */
 footer {
-    font-size:x-small;
+  font-size: x-small;
 }
 
-/*Make menu bar at the top of the page that stays there after scrolling down */
-.menu {
-    background-color:rgb(76, 70, 70);
-    padding: 5px 0;
-    position: sticky;
-    width: 100%;
-    top: 0;
-}
-
-/*Make a list of the menu options at the top of the page and create direct links to the site */
-.menu ul {
-    list-style: none;
-    text-align: center;
-    margin: 0 auto;
-
-    li {
-        display: inline;
-        margin: 0 15px;
-        font-size: 30px;
-    }
-
-    li a{
-        color: beige;
-    }
-}
-
-/*In the experience section, create columns for work experience with descriptions */
+/*Using grid to create grid columns of all experience elements */
 .Experience-items {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,30em));
+    gap: 20px;
 }
 
-/*In the experience section, make the columns for work experience with descriptions evenly spaced to avoid overlap */
+/*The background color and look of the columns for the experience-items grid */
 .Experiences {
-    border: 2px ;
-    margin: 5px;
+  background-color: gray;
+  border-radius: 0.8em;
+  padding: 1.0em;
+}
+
+/* Media query for the experiences to be modified if screen width is below 600px */
+@media only screen and (max-width: 600px) {
+    .Experiences {
+        grid-template-columns: 1fr 1fr;
+        background-color: rgb(109, 106, 104,0.5);
+        color: rgb(255, 255, 255);
+        border-radius: 1.0em;
+        padding: 1.0em;
+    }
+}
+
+/* Media Query for the h2 headers to be modified if screen width is below 600px  */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 17px;
+    background-color: color-mix(in hsl shorter hue, rgb(67, 84, 120) 30%, rgb(73, 87, 87) 50%);
+  }
+}
+
+/* Media Query for the h1 header with my name to be modified if screen width is below 600px  */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 33px;
+    font-family: "Diplomata", serif;
+  }
 }
