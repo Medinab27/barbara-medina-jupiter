@@ -11,11 +11,12 @@ body {
 /*Make menu bar at the top of the page that stays there after scrolling down */
 .menu {
   background-color: rgb(31, 28, 28);
-  padding: 5px 0;
+  padding: 5px 25px;
   position: sticky;
   width: 45%;
   top: 0;
   font-size:small;
+  margin-left: 10px;
 }
 
 /*Make a list of the menu options at the top of the page and create direct links to the site */
@@ -35,28 +36,44 @@ body {
   }
 }
 
+.menu-container {
+  position: sticky;
+  z-index: 2;
+}
+
 /* Image container to manipulate size and position on page with a nested css for how the image behaves */
 .image-container {
-  width: auto; 
+  width: 100%; 
   height: 100vh; /* Full viewport height */
-  position: fixed;
+  position: relative;
   left: 0; /* Align to the left side */
   top: 15; /* Align to the top */
+  grid-column: 1 / 2;
+  
 
   img {
     width: 100%; 
     height: 100%; 
-    object-fit: contain; /* Maintain aspect ratio while filling the container */
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
     opacity: 0.5; /* Set image opacity to 50% */
   }
 }
 
+.site-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  height: 100vh;
+}
+
 /* Text container to move all the text of the website to the right hand side of the image */
 .text-container {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 50%;
+  grid-column: 2/ 3;
+ /*  position: absolute;
+ top: 0; */
+  left: 100%;
+  width: 100%;
   height: 100vh;
   justify-content: space-around; /* Wrapping the text around to prevent horizontal scrolling */
   word-wrap: break-word;
@@ -145,6 +162,30 @@ footer {
   padding: 1.0em;
 }
 
+/*CSS for the Skills section*/
+#Skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px,10em));
+  gap: 10px;
+  padding: 20px;
+
+  /*removes default formatting, bullet points removed*/
+  list-style: none; 
+  padding: 0px;
+  margin: 0;
+}
+
+#Skills li {
+  text-align: center;
+  font-size: 1rem;
+  background-color: rgb(112, 112, 112,0.5);
+  border-radius: 0.8em;
+  padding: 0.5em;
+  max-width: 100%;
+  word-wrap: break-word;
+  margin: 5px;
+}
+
 /* Media query for the experiences to be modified if screen width is below 600px */
 @media only screen and (max-width: 600px) {
     .Experiences {
@@ -171,3 +212,5 @@ footer {
     font-family: "Diplomata", serif;
   }
 }
+
+
