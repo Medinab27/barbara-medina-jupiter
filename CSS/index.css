@@ -186,6 +186,21 @@ footer {
   margin: 5px;
 }
 
+/*CSS for the Form message*/
+form[name='leave_message']{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+form textarea{
+ font-size: 16px;
+ width: 100%;
+ height: 30px;
+}
+
+
+
 /* Media query for the experiences to be modified if screen width is below 600px */
 @media only screen and (max-width: 600px) {
     .Experiences {
@@ -211,6 +226,18 @@ footer {
     font-size: 33px;
     font-family: "Diplomata", serif;
   }
+}
+
+/* Button size for mobile devices */
+@media screen and (max-width: 768px){
+  form button{
+    font-size: 18px;
+  }
+  form textarea{
+    font-size:14px;
+    padding: 10px;
+  }
+
 }
 
 
