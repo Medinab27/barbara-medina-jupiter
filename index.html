@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbara Medina's Portfolio</title>
     <meta charset="utf-8" />
     <meta name="author" content="Barbara" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,171 +17,168 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./CSS/index.css" />
+    <title>Barbara Medina's Portfolio</title>
   </head>
-
-  <body>
-    <header><div class = "menu-container">
-      <nav class="menu">
-        <ul>
-          <li><a href="#Introduction"> Introduction </a></li>
-          <li><a href="#Experience"> Experience </a></li>
-          <li><a href="#Skills"> Skills </a></li>
-          <li><a href="#Projects"> Projects </a></li>
-          <li><a href="#Connect"> Connect </a></li>
-          <li><a href="#message-form"> Leave a Message </a></li>
-        </ul>
-      </nav></div>
+    <header>
+      <div class="menu-container">
+        <nav class="menu">
+          <ul>
+            <li><a href="#Introduction"> Introduction </a></li>
+            <li><a href="#Experience"> Experience </a></li>
+            <li><a href="#Skills"> Skills </a></li>
+            <li><a href="#Projects"> Projects </a></li>
+            <li><a href="#Connect"> Connect </a></li>
+            <li><a href="#message-form"> Leave a Message </a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class = "site-container">
-    <div class="image-container">
-      <img
-        id="Headshot"
-        src="images/Headshot_BarbaraMedina.PNG"
-        alt="picture of a young brown woman with pony tail and glasses"
-      />
+    <div class="site-container">
+      <div class="image-container">
+        <img
+          id="Headshot"
+          src="images/Headshot_BarbaraMedina.PNG"
+          alt="picture of a young brown woman with pony tail and glasses"
+        />
+      </div>
+      <div class="text-container">
+        <h1><em>Barbara Medina</em></h1>
+        <main>
+          <section id="Introduction">
+            <h2>Introduction</h2>
+            <p>
+              This digital portfolio showcases a rich handful of experiences
+              that have built my competence as an engineer. This portfolio
+              highlights three main components that I believe all engineers must
+              have in order to be prepared for their field. Each section will
+              highlight examples from my personal and professional journey to
+              demonstrate my achievement within each attribute.
+            </p>
+            <h2>Biography</h2>
+            <p>
+              I am the eldest of a first generation family and the first in my
+              extended family to ever attend college. I was born in Guanajuato,
+              Mexico. My love for math and genuine passion for the community
+              propelled me into such an accomplishment. However, it was my
+              commitment to building a better world for my family and my
+              community, through a mission-driven career, that encouraged my
+              mentors to introduce me to engineering. The curiosity,
+              imagination, love for learning and the success with hands-on
+              environments both as a child and as an adult led me to dive into
+              the challenge. I now have two degrees, teaching and mechanical
+              engineering. These degrees make me a qualified and passionate
+              graduate of Seattle University seeking an opportunity that aligns
+              with my mission and vision as an engineer.
+            </p>
+          </section>
+
+          <section id="Experience">
+            <h2>Experience</h2>
+            <div class="Experience-items">
+              <div class="Experiences">
+                <h3>Mechanical Design Engineer III</h3>
+                <p>
+                  Project manager of multiple projects at a time. Designs
+                  airside, and hydronic systems for commercial projects such as
+                  Microsoft campus, labs, offices, waster water treatment plants
+                  amongst others. Leads interdisciplinary collaboration with
+                  high stake clients as well internal teams, and construction.
+                  Construction administration experience with submittals, RFI's,
+                  site walks and actively solving field problems.
+                </p>
+              </div>
+
+              <div class="Experiences">
+                <h3>Code the Dream Programming Course</h3>
+                <p>
+                  Applied and got accepted into intro to programming course to
+                  learn Javascript. Works with excellent mentors and is provided
+                  a myriad of resources to be successful in learning to code.
+                  The course consists of weekly assignments that build on each
+                  other to create a portfolio as the end result of the course.
+                  Additionally, there is a comprehensive exam at the end to
+                  ensure learning of important coding concepts and to determine
+                  if student can move onto the advanced course.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="Skills">
+            <h2>Skills</h2>
+            <ul></ul>
+          </section>
+
+          <section id="Projects">
+            <h2>Projects</h2>
+            <ul>
+              <li>Project 1</li>
+              <li>Project 2</li>
+              <li>Project 3</li>
+            </ul>
+          </section>
+
+          <section id="Connect">
+            <h2>Connect</h2>
+            <ul>
+              <div class="connection-icon">
+                <li>
+                  <a href="https://github.com/Medinab27">
+                    <img
+                      src="images/Github_logo.png"
+                      alt="Image of Github logo"
+                      width="90"
+                      height="90"
+                    />
+                  </a>
+                </li>
+              </div>
+
+              <div class="connection-icon">
+                <li>
+                  <a href="https://www.linkedin.com/in/barbara-medina/">
+                    <img
+                      src="images/LinkedIn_logo.png"
+                      alt="Image of LinkedIn logo"
+                      width="150"
+                      height="50"
+                    />
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </section>
+          <section id="message-form">
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+              <label for="usersName">First and Last Name</label>
+              <input
+                type="text"
+                name="usersName"
+                id="usersName"
+                required="true"
+              />
+
+              <label for="usersEmail">Email</label>
+              <input
+                type="email"
+                name="usersEmail"
+                id="usersEmail"
+                required="true"
+              />
+              <label for="usersMessage">Message</label>
+              <textarea name="usersMessage" id="usersMessage" required="true">
+              </textarea>
+              <button type="submit" id="submit-button">Submit</button>
+            </form>
+          </section>
+          <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+          </section>
+        </main>
+      </div>
     </div>
-    <div class="text-container">
-      <h1><em>Barbara Medina</em></h1>
-      <main>
-        <section id="Introduction">
-          <h2>Introduction</h2>
-          <p>
-            This digital portfolio showcases a rich handful of experiences that
-            have built my competence as an engineer. This portfolio highlights
-            three main components that I believe all engineers must have in
-            order to be prepared for their field. Each section will highlight
-            examples from my personal and professional journey to demonstrate my
-            achievement within each attribute.
-          </p>
-          <h2>Biography</h2>
-          <p>
-            I am the eldest of a first generation family and the first in my
-            extended family to ever attend college. I was born in Guanajuato,
-            Mexico. My love for math and genuine passion for the community
-            propelled me into such an accomplishment. However, it was my
-            commitment to building a better world for my family and my
-            community, through a mission-driven career, that encouraged my
-            mentors to introduce me to engineering. The curiosity, imagination,
-            love for learning and the success with hands-on environments both as
-            a child and as an adult led me to dive into the challenge. I now
-            have two degrees, teaching and mechanical engineering. These degrees
-            make me a qualified and passionate graduate of Seattle University
-            seeking an opportunity that aligns with my mission and vision as an
-            engineer.
-          </p>
-        </section>
-
-        <section id="Experience">
-          <h2>Experience</h2>
-          <div class="Experience-items">
-            <div class="Experiences">
-              <h3>Mechanical Design Engineer III</h3>
-              <p>
-                Project manager of multiple projects at a time. Designs airside,
-                and hydronic systems for commercial projects such as Microsoft
-                campus, labs, offices, waster water treatment plants amongst
-                others. Leads interdisciplinary collaboration with high stake
-                clients as well internal teams, and construction. Construction
-                administration experience with submittals, RFI's, site walks and
-                actively solving field problems.
-              </p>
-            </div>
-
-            <div class="Experiences">
-              <h3>Code the Dream Programming Course</h3>
-              <p>
-                Applied and got accepted into intro to programming course to
-                learn Javascript. Works with excellent mentors and is provided a
-                myriad of resources to be successful in learning to code. The
-                course consists of weekly assignments that build on each other
-                to create a portfolio as the end result of the course.
-                Additionally, there is a comprehensive exam at the end to ensure
-                learning of important coding concepts and to determine if
-                student can move onto the advanced course.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="Skills">
-          <h2>Skills</h2>
-          <ul>
-          </ul>
-        </section>
-
-        <section id="Projects">
-          <h2>Projects</h2>
-          <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-          </ul>
-        </section>
-
-        <section id="Connect">
-          <h2>Connect</h2>
-          <ul>
-            <div class="connection-icon">
-              <li>
-                <a href="https://github.com/Medinab27">
-                  <img
-                    src="images/Github_logo.png"
-                    alt="Image of Github logo"
-                    width="90"
-                    height="90"
-                  />
-                </a>
-              </li>
-            </div>
-
-            <div class="connection-icon">
-              <li>
-                <a href="https://www.linkedin.com/in/barbara-medina/">
-                  <img
-                    src="images/LinkedIn_logo.png"
-                    alt="Image of LinkedIn logo"
-                    width="150"
-                    height="50"
-                  />
-                </a>
-              </li>
-            </div>
-          </ul>
-        </section>
-        <section id="message-form">
-          <h2>Leave a Message</h2>
-          <form name = "leave_message">
-            <label for = "usersName">First and Last Name</label>
-            <input 
-            type="text" 
-            name = "usersName" 
-            id ="usersName"
-            required = true>
-            
-            <label for="usersEmail">Email</label>
-            <input 
-            type ="email" 
-            name="usersEmail" 
-            id ="usersEmail"
-            required =true>
-            <label for="usersMessage">Message</label>
-            <textarea 
-            name="usersMessage" 
-            id="usersMessage"
-            required="true">
-          </textarea>
-          <button type="submit" id="submit-button">Submit</button>
-          </form>
-        </section>
-        <section id ="messages">
-          <h2>Messages</h2>
-          <ul>
-
-          </ul>
-        </section>
-      </main>
-    </div>
-    </div>
-    <script src="./index.js"></script>
+    <script src="./js folder/index.js"></script>
   </body>
 </html>

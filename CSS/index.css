@@ -1,3 +1,5 @@
+
+/*Designed for web browsers as the default*/
 /* Change the default color of the page body  */
 body {
   background-color: rgba(246, 242, 242, 0.793);
@@ -10,12 +12,12 @@ body {
 
 /*Make menu bar at the top of the page that stays there after scrolling down */
 .menu {
-  background-color: rgb(31, 28, 28);
+  background-color: rgb(19, 18, 18);
   padding: 5px 25px;
   position: sticky;
   width: 45%;
   top: 0;
-  font-size:small;
+  font-size: small;
   margin-left: 10px;
 }
 
@@ -24,39 +26,36 @@ body {
   list-style: none;
   text-align: center;
   margin: 0 auto;
+}
+.menu li {
+  display: inline;
+  margin: 0 15px;
+  font-size: 17px;
+}
 
-  li {
-    display: inline;
-    margin: 0 15px;
-    font-size: 17px;
-  }
-
-  li a {
-    color: beige;
-  }
+.menu li a {
+  color: beige;
 }
 
 .menu-container {
   position: sticky;
   z-index: 2;
 }
-
 /* Image container to manipulate size and position on page with a nested css for how the image behaves */
 .image-container {
-  width: 100%; 
+  width: 100%;
   height: 100vh; /* Full viewport height */
   position: relative;
   left: 0; /* Align to the left side */
   top: 15; /* Align to the top */
   grid-column: 1 / 2;
-  
+}
 
-  img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* Maintain aspect ratio while filling the container */
-    opacity: 0.5; /* Set image opacity to 50% */
-  }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  opacity: 0.5; /* Set image opacity to 50% */
 }
 
 .site-container {
@@ -70,7 +69,7 @@ body {
 /* Text container to move all the text of the website to the right hand side of the image */
 .text-container {
   grid-column: 2/ 3;
- /*  position: absolute;
+  /*  position: absolute;
  top: 0; */
   left: 100%;
   width: 100%;
@@ -107,7 +106,11 @@ h2 {
   font-weight: bolder;
   color: rgb(252, 249, 249);
   text-align: center;
-  background-color: color-mix(in hsl shorter hue, rgb(50, 45, 46) 30%, rgb(51, 59, 59) 50%);
+  background-color: color-mix(
+    in hsl shorter hue,
+    rgb(50, 45, 46) 30%,
+    rgb(51, 59, 59) 50%
+  );
   border-radius: 7%;
   width: 140px;
   word-wrap: break-word;
@@ -150,27 +153,27 @@ footer {
 
 /*Using grid to create grid columns of all experience elements */
 .Experience-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,30em));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 30em));
+  gap: 20px;
 }
 
 /*The background color and look of the columns for the experience-items grid */
 .Experiences {
   background-color: gray;
   border-radius: 0.8em;
-  padding: 1.0em;
+  padding: 1em;
 }
 
 /*CSS for the Skills section*/
 #Skills ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px,10em));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 10em));
   gap: 10px;
   padding: 20px;
 
   /*removes default formatting, bullet points removed*/
-  list-style: none; 
+  list-style: none;
   padding: 0px;
   margin: 0;
 }
@@ -178,7 +181,7 @@ footer {
 #Skills li {
   text-align: center;
   font-size: 1rem;
-  background-color: rgb(112, 112, 112,0.5);
+  background-color: rgb(112, 112, 112, 0.5);
   border-radius: 0.8em;
   padding: 0.5em;
   max-width: 100%;
@@ -187,57 +190,68 @@ footer {
 }
 
 /*CSS for the Form message*/
-form[name='leave_message']{
+form[name="leave_message"] {
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
 
-form textarea{
- font-size: 16px;
- width: 100%;
- height: 30px;
+form textarea {
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
 }
-
-
 
 /* Media query for the experiences to be modified if screen width is below 600px */
-@media only screen and (max-width: 600px) {
-    .Experiences {
-        grid-template-columns: 1fr 1fr;
-        background-color: rgb(109, 106, 104,0.5);
-        color: rgb(255, 255, 255);
-        border-radius: 1.0em;
-        padding: 1.0em;
-    }
-}
-
-/* Media Query for the h2 headers to be modified if screen width is below 600px  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+  .Experiences {
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(109, 106, 104, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 1em;
+    padding: 1em;
+  }
+  /* Media Query for the h2 headers to be modified if screen width is below 600px  */
   h2 {
-    font-size: 17px;
-    background-color: color-mix(in hsl shorter hue, rgb(67, 84, 120) 30%, rgb(73, 87, 87) 50%);
+    font-size: 20px;
+    background-color: color-mix(
+      in hsl shorter hue,
+      rgb(67, 84, 120) 30%,
+      rgb(73, 87, 87, 0.5)
+    );
+  }
+  /* Media Query for the h1 header with my name to be modified if screen width is below 600px  */
+  h1 {
+    font-size: 30px;
+    font-family: "Diplomata", serif;
   }
 }
 
-/* Media Query for the h1 header with my name to be modified if screen width is below 600px  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .Experiences {
+    grid-template-columns: 1fr;
+    background-color: rgba(17, 16, 15, 0.5);
+    color: rgb(255, 255, 255);
+    border-radius: 1em;
+    padding: 1em;
+  }
+  h2 {
+    font-size: 12px;
+    background-color: rgb(17, 24, 41, 0.5);
+  }
   h1 {
-    font-size: 33px;
+    font-size: 20px;
     font-family: "Diplomata", serif;
   }
 }
 
 /* Button size for mobile devices */
-@media screen and (max-width: 768px){
-  form button{
+@media screen and (max-width: 768px) {
+  form button {
     font-size: 18px;
   }
-  form textarea{
-    font-size:14px;
+  form textarea {
+    font-size: 14px;
     padding: 10px;
   }
-
 }
-
-
