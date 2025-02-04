@@ -15,7 +15,7 @@ copyright.innerHTML= `<strong> @${thisYear} - Created by Barbara Medina through 
 footer.appendChild(copyright);
 
 //Week 11: Adding skills
-const skills = ['Javacript','HTML','CSS', 'GitHUb','Revit','BIM360','IES'];
+const skills = ['Javacript','HTML','CSS', 'GitHub','Revit','BIM360','IES'];
 const skillsSection = document.querySelector('#Skills');
 const skillsList = skillsSection.querySelector('ul');
 
@@ -25,4 +25,41 @@ for (let skill of skills){
     skillsList.appendChild(skillLI);
 }
 
+//Handle Message Form Submit
+const messageForm = document.querySelector("[name='leave_message']")
+messageForm.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    let usersName = event.target.usersName.value;
+    let usersMessage = event.target.usersMessage.value;
+    let usersEmail = event.target.usersEmail.value;
+
+    //log the information from the user inputs
+    console.log("Name:", usersName);
+    console.log("Message", usersMessage);
+    console.log("Email:", usersEmail);
+
+    const messageSection = document.querySelector('#messages');
+    const messageList = messageSection.querySelector('ul');
+    const newMessage = document.createElement('li');
+    newMessage.innerHTML=`<a href="mailto:${usersEmail}">${usersName}</a> <span>${usersMessage}</span>`;
+
+    //create a remove button
+    const removeButton = document.createElement('button');
+    removeButton.innerText='Remove';
+    removeButton.type='button';
+
+    //event listener with a click for the remove button
+    removeButton.addEventListener("click",()=>{
+        const entry = removeButton.parentNode;
+        entry.remove();
+        
+    });
+
+    newMessage.appendChild(removeButton);
+
+    messageList.appendChild(newMessage);
+    
+    //Resets the form after the submit button has been clicked
+    messageForm.reset();
+});
 
