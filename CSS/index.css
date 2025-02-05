@@ -12,7 +12,7 @@ body {
 
 /*Make menu bar at the top of the page that stays there after scrolling down */
 .menu {
-  background-color: rgb(19, 18, 18);
+  background-color: rgb(15, 14, 14);
   padding: 5px 25px;
   position: sticky;
   width: 45%;
@@ -31,6 +31,7 @@ body {
   display: inline;
   margin: 0 15px;
   font-size: 17px;
+  white-space: nowrap;
 }
 
 .menu li a {
@@ -202,6 +203,27 @@ form textarea {
   height: 30px;
 }
 
+#Projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 10em));
+  gap: 10px;
+  padding: 20px;
+  margin: 0;
+}
+
+#Projects li {
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: rgba(106, 103, 103, 0.5);
+  border-radius: 0.8em;
+  padding: 0.5em;
+  max-width: 100%;
+  word-wrap: break-word;
+  list-style:none;
+  margin: 5px;
+  border: 0.75px solid rgb(83, 70, 70);
+}
+
 /* Media query for the experiences to be modified if screen width is below 600px */
 @media only screen and (max-width: 1024px) {
   .Experiences {
@@ -236,12 +258,19 @@ form textarea {
     padding: 1em;
   }
   h2 {
-    font-size: 12px;
+    font-size: 23px;
     background-color: rgb(17, 24, 41, 0.5);
   }
   h1 {
-    font-size: 20px;
-    font-family: "Diplomata", serif;
+    visibility: hidden;
+  }
+  h1 ::after {
+    content: "Barbara";
+    visibility: visible;
+    font-family: "Diplomata", serif; 
+    font-size: clamp(16px, 5vw, 32px);  /* Font size scales from 16px to 32px */
+    word-wrap: break-word; 
+    white-space: nowrap;
   }
 }
 
